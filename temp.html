@@ -5,21 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-   <!-- <style>
-      i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2rem;
-    height: 2rem;
-    margin: -1rem 0 0 -1rem;
-    background: #FFF;
-    transform: scale(0);
-    border-radius: 50%;
-    z-index: -10;
-  }
+
   
-    </style> -->
+    
       <style>
           a {
   position: absolute;
@@ -73,6 +61,7 @@ a::after {
   -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
           transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
 }
+
 body {
   background-image:url('images/Background.jpg');
   background-repeat: no-repeat;
@@ -93,37 +82,53 @@ body {
   -webkit-transform: perspective(800px);
           transform: perspective(800px);
 }
+
       </style>
       <script>
           'use strict';
+
           var docStyle = document.documentElement.style;
           var aElem = document.querySelector('a');
           var boundingClientRect = aElem.getBoundingClientRect();
+
           aElem.onmousemove = function (e) {
+
               var x = e.clientX - boundingClientRect.left;
               var y = e.clientY - boundingClientRect.top;
+
               var xc = boundingClientRect.width / 2;
               var yc = boundingClientRect.height / 2;
+
               var dx = x - xc;
               var dy = y - yc;
+
               docStyle.setProperty('--rx', dy / -1 + 'deg');
               docStyle.setProperty('--ry', dx / 10 + 'deg');
           };
+
           aElem.onmouseleave = function (e) {
+
               docStyle.setProperty('--ty', '0');
               docStyle.setProperty('--rx', '0');
               docStyle.setProperty('--ry', '0');
           };
+
           aElem.onmousedown = function (e) {
+
               docStyle.setProperty('--tz', '-25px');
           };
+
           document.body.onmouseup = function (e) {
+
               docStyle.setProperty('--tz', '-12px');
           };
       </script>
     <title>Gallery</title>
   </head>
   <body>
+  
+    <p>s,cfpiejsldkli</p>
+  
     <div id = "impress">
 
       <div class = "step img-card" data-x = "0" data-y = "0">
@@ -169,11 +174,13 @@ body {
     <script src = "js/script.js"></script>
     <script src = "anime.min.js"></script>
       <script>
+
   var maxElements = 200;
   var duration = 7000;
   var toAnimate = [];
   var w = window.innerWidth > window.innerHeight ? window.innerWidth : window.innerHeight;
   var colors = ['#FF324A', '#31FFA6', '#206EFF', '#FFFF99'];
+
   var createElements = (function() {
     var fragment = document.createDocumentFragment();
     for (var i = 0; i < maxElements; i++) {
@@ -185,6 +192,7 @@ body {
     }
     document.body.appendChild(fragment);
   })();
+
   var animate = function(el) {
     anime({
       targets: el,
@@ -198,7 +206,9 @@ body {
       loop: true
     });
   }
+
   toAnimate.forEach(animate);
+
   </script>
   
   </body>
