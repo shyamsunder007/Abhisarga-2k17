@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+   <!-- <style>
+      i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: -1rem 0 0 -1rem;
+    background: #FFF;
+    transform: scale(0);
+    border-radius: 50%;
+    z-index: -10;
+  }
+  
+    </style> -->
+      <style>
+          a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  
+  padding: 1.2em 2em;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+}
+a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -webkit-linear-gradient(315deg, #6e8efb, #a777e3);
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 4px;
+  -webkit-transition: box-shadow .5s ease, -webkit-transform .2s ease;
+  transition: box-shadow .5s ease, -webkit-transform .2s ease;
+  transition: box-shadow .5s ease, transform .2s ease;
+  transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
+  will-change: transform;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+          transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+}
+a:hover::before {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+a::after {
+  position: relative;
+  display: inline-block;
+  content: attr(data-title);
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  font-weight: bold;
+  letter-spacing: .01em;
+  will-change: transform;
+  -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+          transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+}
+
+body {
+  background-image:url('images/Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+          transform: perspective(800px);
+}
+
+      </style>
+      <script>
+          'use strict';
+
+          var docStyle = document.documentElement.style;
+          var aElem = document.querySelector('a');
+          var boundingClientRect = aElem.getBoundingClientRect();
+
+          aElem.onmousemove = function (e) {
+
+              var x = e.clientX - boundingClientRect.left;
+              var y = e.clientY - boundingClientRect.top;
+
+              var xc = boundingClientRect.width / 2;
+              var yc = boundingClientRect.height / 2;
+
+              var dx = x - xc;
+              var dy = y - yc;
+
+              docStyle.setProperty('--rx', dy / -1 + 'deg');
+              docStyle.setProperty('--ry', dx / 10 + 'deg');
+          };
+
+          aElem.onmouseleave = function (e) {
+
+              docStyle.setProperty('--ty', '0');
+              docStyle.setProperty('--rx', '0');
+              docStyle.setProperty('--ry', '0');
+          };
+
+          aElem.onmousedown = function (e) {
+
+              docStyle.setProperty('--tz', '-25px');
+          };
+
+          document.body.onmouseup = function (e) {
+
+              docStyle.setProperty('--tz', '-12px');
+          };
+      </script>
+    <title>Gallery</title>
+  </head>
+  <body>
+    <div id = "impress">
+
+      <div class = "step img-card" data-x = "0" data-y = "0">
+        <div class = "img1" ><img src="images/img1.png"></div>
+      </div>
+
+      <div class = "step img-card" data-x = "0" data-y = "1000" data-rotate-y = "90">
+        <div class = "img2"><img src="images/img2.jpg"></div>
+      </div>
+
+      <div class = "step img-card" data-x = "1000" data-y = "1000" data-z = "1000" data-rotate-z = "90">
+        <div class = "img3"><img src="images/img3.jpg"></div>
+      </div>
+      
+      <div class = "step img-card" data-x = "2000" data-y = "-1000" data-z = "2000" data-rotate-x = "90" data-rotate-y = "70">
+        <div class = "img4"><img src="images/img4.jpg"></div>
+      </div>
+      
+      <div class = "step img-card" data-x = "2000" data-y = "2000" data-z = "2000" data-rotate-x = "20" data-rotate-z = "70">
+        <div class = "img5"><img src="images/img5.jpg"></div>
+      </div>
+
+	     <div class = "step img-card" data-x = "2000" data-y = "3000" data-z = "3000" data-rotate-y = "80" data-rotate-z = "70">
+        <div class = "img6"><img src="images/img6.jpg"></div>
+      </div>
+      <div class = "step img-card" data-x = "3000" data-y = "2000" data-z = "3000" data-rotate-y = "20" data-rotate-z = "70">
+        <div class = "img7"><img src="images/img7.jpg"></div>
+      </div>
+       <div class = "step img-card" data-x = "2000" data-y = "3000" data-z = "2000" data-rotate-y = "20" data-rotate-z = "70">
+        <div class = "img8"><img src="images/img8.png"></div>
+      </div>
+      <div class = "step img-card" data-x = "2000" data-y = "-1000" data-z = "3000" data-rotate-x = "90" data-rotate-y = "90">
+        <div class = "img9"><img src="images/img9.jpg"></div>
+      </div>
+      <div class = "step img-card" data-x = "2000" data-y = "-1000" data-z = "3000" data-rotate-x = "20" data-rotate-z = "70">
+        <div class = "img10"><img src="images/img10.jpg"></div>
+      </div>
+    </div>
+
+   
+
+    <script src = "js/impress.js"></script>
+    <script src = "js/script.js"></script>
+    <script src = "anime.min.js"></script>
+      <script>
+
+  var maxElements = 200;
+  var duration = 7000;
+  var toAnimate = [];
+  var w = window.innerWidth > window.innerHeight ? window.innerWidth : window.innerHeight;
+  var colors = ['#FF324A', '#31FFA6', '#206EFF', '#FFFF99'];
+
+  var createElements = (function() {
+    var fragment = document.createDocumentFragment();
+    for (var i = 0; i < maxElements; i++) {
+      var el = document.createElement('i');
+      el.style.background = colors[anime.random(0, 3)];
+      el.style.transform = 'rotate('+anime.random(-360, 360)+'deg)';
+      toAnimate.push(el);
+      fragment.appendChild(el);
+    }
+    document.body.appendChild(fragment);
+  })();
+
+  var animate = function(el) {
+    anime({
+      targets: el,
+      rotate: anime.getValue(el,'rotate'),
+      translateX: [0, w/2],
+      translateY: [0, w/2],
+      scale: [0, 2],
+      delay: anime.random(0, duration),
+      duration: duration,
+      easing: "easeInCubic",
+      loop: true
+    });
+  }
+
+  toAnimate.forEach(animate);
+
+  </script>
+  
+  </body>
+</html>
