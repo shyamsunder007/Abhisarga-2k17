@@ -716,7 +716,7 @@
                     case 40: // down
                              api.next();
                              break;
-                }-->
+                }
                 
                 event.preventDefault();
             }
