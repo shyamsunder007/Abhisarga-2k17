@@ -1,0 +1,413 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Up - Sequence.js Theme</title>
+  <link href="css/sequence-theme.two-up.css" rel="stylesheet" media="all">
+  <!--[if lt IE 9]>
+    <link href="css/sequence-theme.two-up-ie8.css" rel="stylesheet" media="all">
+  <![endif]-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <style type="text/css">
+  #nav{
+    color:#fff;
+    font-size: 0.8em;
+  }
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+    /* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #000; background-image: url("img/Backgorund.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } , .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+  </style>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #leftside
+    {
+      background-image: url(images/back.png);
+      color:white;
+    }
+    .seq-screen {position: fixed;top:0;}
+  </style>
+</head>
+<body>
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div style = "background: rgba(15, 34, 159, .6);" class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title" style = "font-size: 2.6em;">Abhisarga 2K17</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" style = "font-size: 2.3em;" href="">Events</a>
+        <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="gallery/gallery.html">Gallery</a>
+        <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="">Register</a>
+        <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer menu" style = "background-color: rgba(15, 34, 159, 1);font-size: 2.6em;">
+    <span class="mdl-layout-title" style="margin-top: 7px;" id="nav">Abhisarga 2K17</span>
+
+    <nav class="mdl-navigation" style="margin-top: -7px;">
+      <a class="mdl-navigation__link" style = "border-top: 1px solid #fff;border-bottom: 1px solid #fff;" href="" id="nav">Events</a>
+      <a class="mdl-navigation__link" style = "border-bottom: 1px solid #fff;" href="" id="nav" href="gallery/gallery.html">Gallery</a>
+      <a class="mdl-navigation__link" style = "border-bottom: 1px solid #fff;" href="" id="nav">Register</a>
+      <a class="mdl-navigation__link" style = "border-bottom: 1px solid #fff;" href=""  id="nav">Contact Us</a>
+    </nav>
+  </div>
+
+  <div id="sequence" class="seq">
+
+    <div class="seq-nav">
+
+      <ul role="navigation" aria-label="Pagination" class="seq-pagination">
+        <li><a href="#step1" rel="step1" title="Go to slide 1"><span class="numeral">1</span><span class="seq-tooltip">Dubsmash</span></a></li><!--
+        --><li><a href="#step2" rel="step2" title="Go to slide 2"><span class="numeral">2</span><span class="seq-tooltip">Short Film Contest</span></a></li><!--
+        --><li><a href="#step3" rel="step3" title="Go to slide 3"><span class="numeral">3</span><span class="seq-tooltip">Let’s Selfie</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">4</span><span class="seq-tooltip">Coding Contest</span></a></li>
+                    <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">5</span><span class="seq-tooltip">Game (Counter Strike)</span></a></li>
+
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">6</span><span class="seq-tooltip">Cine Quiz</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">7</span><span class="seq-tooltip">Ice Cream Stick Modelling</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">8</span><span class="seq-tooltip">Beg, Borrow, Steal</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">9</span><span class="seq-tooltip">Canvas Painting</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">10</span><span class="seq-tooltip">Eat All You Can</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">11</span><span class="seq-tooltip">De'Maske Arte (Face Painting):</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">12</span><span class="seq-tooltip">Paper Dressing</span></a></li>
+              <li><a href="#step1" rel="step1" title="Go to slide 4"><span class="numeral">13</span><span class="seq-tooltip">Crime Scene Investigation</span></a></li>
+             
+      </ul>
+
+      <button class="seq-next seq-swipe" type="button" aria-label="Next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21.5" viewBox="30.4 23.7 20 21.5" enable-background="new 30.4 23.7 20 21.5" role="img" aria-labelledby="title-swipe-icon"><title id="title-swipe-icon">Swipe Icon</title><path d="M33 23.7c-.1 0-.3.1-.4.2l-2.1 2.1c-.2.2-.2.6 0 .9l2.1 2.1c.2.2.6.2.9 0s.2-.6 0-.9l-1.1-1.1h5.2c.3 0 .6-.3.6-.6s-.3-.6-.6-.6h-5.2l1.1-1.1c.2-.2.3-.6 0-.9-.1-.1-.2-.1-.5-.1zm14.6 0c-.3 0-.6.3-.6.7 0 .1.1.3.2.4l1.1 1.1h-5.2c-.3 0-.6.3-.6.6s.2.5.6.5h5.2l-1.1 1.1c-.2.2-.2.6 0 .9s.6.2.9 0l2.1-2.1c.2-.2.2-.6 0-.9l-2.1-2.1c-.2-.2-.3-.2-.5-.2zm-7.3 1.3c-.8 0-1.4.6-1.4 1.4v8.8c-.5-.6-1.1-1.3-1.6-1.6-.3-.2-.7-.4-1.1-.4-.7 0-1.2.5-1.3 1.2-.1.8.4 1.6.8 2.2l1.5 2.4 1.2 1.9c.6 1 .7 1.8.7 2.9v1.2c0 .1.1.2.2.2h8.2c.1 0 .2-.1.2-.2.1-.8.2-1.6.4-2.4.7-2 1.3-3.9 1.3-6.4v-4c0-.8-.6-1.4-1.4-1.4-.4 0-.7.1-1.2.6 0-.8-.6-1.4-1.4-1.4-.5 0-.9.2-1.2.6-.1-.7-.7-1.2-1.4-1.2-.5 0-.9.2-1.2.6v-3.5c.2-.8-.5-1.5-1.3-1.5z"/></svg>
+      </button>
+    </div>
+
+    <button class="seq-next-button seq-next" type="button" aria-label="Next">
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="16.1 -0.7 60 60" enable-background="new 16.1 -0.7 60 60" role="img" aria-labelledby="title-down-arrow"><title id="title-down-arrow">Down/Next Arrow</title><path d="M46.407 1.399l27.435 27.435-28.213 28.213-27.435-27.435z"/><path fill="#fff" d="M46.1 59.3l-30-30 30-30 30 30-30 30zm-22.9-30l22.9 22.9 22.9-22.9-22.9-22.9-22.9 22.9zM39.278 23.872l11.031 11.031-4.172 4.172-11.031-11.031zM57.172 28.079l-11.031 11.031-4.172-4.172 11.031-11.031z"/></svg>
+    </button>
+
+    <div class="seq-screen">
+      <ul class="seq-canvas">
+        <li class="step1 seq-in">
+          <div data-seq class="seq-feature seq-half">
+            <div style="background-image: url(images/dub.jpg)" style="object-fit: contain;">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/fern-leaves.jpg" alt="A close-up of green fern leaves" />
+            </div>
+          </div>
+          <div id="leftside" data-seq class="seq-content seq-half seq-valign"  >
+            <div >
+              <h1>Dubsmash <br>(Cartoon and Anime Theme):</h1>
+              <h3>Calling all budding stars! Abhisarga 2k17 gives you the
+
+ultimate platform to showcase your unique talent through a medium that has taken
+
+social media by storm - Dubsmash. Bring out your flair for acting and prove that you
+
+are a real performer in this competition. All you have to do is record the most one-of-
+
+a-kind, entertaining and hilarious Dubsmash video that you can, based on your
+
+favourite cartoon character. The Dubsmash with the maximum likes stands to win
+
+prize money of Rs. 500. So get creative, bring out your props and give us your best
+
+expressions - this is a competition that you just cannot miss. Upload your dubsmashes on _________.
+<br>
+<b>Note</b>: Maximum duration of a dubsmash is 45 seconds.<br>
+
+Only ONE entry per person/group is allowed.</h3>
+            </div>
+          </div>
+        </li>
+        <li class="step2">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/shrtflm.jpg)" style="object-fit: contain;">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/autumn-leaves.jpg" alt="Focused on a single autumn leave hanging from a thin branch. More leaves appear out of focus in the background" />
+            </div>
+          </div>
+          <div id="leftside" data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div >
+              <h1> Short Film Contest:</h1>
+ 
+          
+              
+            </div>
+          </div>
+        </li>
+        <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/sel.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside" data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Let’s Selfie:</h2>
+              <h3>Abhisarga is coming! But first, let’s take a #selfie...<br> Show us the strong
+
+bond of friendship that IIITian’s share and upload using the hashtags <br>#IIITS
+
+#abhisarga2k17 at _________ to win prize money of Rs. 500.</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step4">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/code.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Coding Contest</h2>
+              <h3></h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/cs.jpg)" style=" background-size: contain;">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Game (Counter Strike)</h2>
+              <h3>The great thing about games is that they’re always better
+
+with more people. Here’s your chance to join the fun and play Counter Strike that
+
+everyone’s been raving about. The competition is high, and the prize money is worth
+
+3000 bucks. Come, play, give your best and show us what you got!</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/cq.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Cine Quiz</h2>
+              <h3>Movie buffs, this one’s for you – it’s your time to shine and show the world
+
+your *ahem* so useful knowledge of the countless dialogues that you know verbatim,
+
+the infinite lyrics stored in your brain in place of the algo code that you should
+
+remember and let your fanaticism out!<br>
+
+“Bade bade shehron mein aise chote chote quizzes hote rehte hai, bhai log!”</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/ics.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside" data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Ice Cream Stick Modelling</h2>
+              <h3>You will be given only ice cream sticks (you can use
+
+fevikwik and paints also) as material. An elaborate task will be given on the spot. The
+
+participants are supposed to use the sticks to build a structure that should achieve
+
+the goal. For instance: Build a bridge that holds a standard size mobile phone for at
+
+least one whole minute, or build a boat out of the ice cream sticks that will take a
+
+mobile phone from one edge of a water body to another. Best two structures will be
+
+awarded prizes worth 1000 and 500 rupees.<br>
+
+Note: Team size of 5 to 7 is allowed.</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/DC.png)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Beg, Borrow, Steal</h2>
+              <h3>You think you’ve got everything you need? Think Again. Prepare
+
+to use all your resources and brainpower to fetch the most ridiculous, unfathomable
+
+and extraordinary things possible from a list of items given to you. Each object on this
+
+list earns you specified points and the team with the highest points wins. Best two
+
+teams will win prizes of rupees 1000 and 500. Beware. This event is a race against
+
+time and the other teams. Come prepared.<br>
+
+Note: The registration will be on-spot and on first come basis.    
+<br>
+Rules: Find as many items on the list as possible within the given time period.
+<br>
+      Team size: 5 people</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/Cp.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Canvas Painting</h2>
+              <h3>Colours, paints and your artistic hands is all you need for the artsy
+
+celebration we have here. A blank canvas – all yours to design and take goodies
+
+back for the masterpiece that you create.<br>
+
+Remember, when we say hands – we genuinely mean HANDS (or legs – if you’re up
+
+for it), no brushes or palettes!</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/et.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Eat All You Can</h2>
+              <h3>To satisfy your ravishing hunger, IIITS brings to you this food
+
+festival - EAT ALL YOU CAN. We invite all bhukkads, and food is on the house.
+
+Before registering though, just keep in mind that the ‘food’ served will be of our
+
+choice, and there’s no backing out later.<br>
+
+Note: Teams are in pairs of 2 – a boy and a girl<br>
+
+The Jodi that showcases maximum talent and finishes all rounds with clean plates
+
+and empty glasses will win 750 bucks each.</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/fp.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>De'Maske Arte (Face Painting)</h2>
+              <h3>Using your imagination to the fullest, show your
+
+creativity while using faces as your canvas sheets and paint your heart out. Unleash
+
+the power of your right brain and give us your best strokes. The top two face painting
+
+teams will win 1000 and 500 bucks respectively.<br>
+
+Note: Team size: 4 people</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/pd.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Paper Dressing</h2>
+              <h3>This is an event for all the designers and models. Using one of the
+
+most used mediums of spreading news, we challenge you to create a front page
+
+story yourself by the dress you prepare, tearing and wearing the newspaper to
+
+design a dress. Using ribbons, coloured paper, plaster and staplers, create the best
+
+dress you can and the top two dresses will win 1000 and 500 bucks respectively.<br>
+
+Note: Team size: 4 to 5 people per team</h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+          <li class="step3">
+          <div data-seq class="seq-feature seq-half seq-half-right">
+            <div style="background-image: url(images/cse.jpg)">
+              <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
+              <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
+            </div>
+          </div>
+          <div id="leftside"data-seq class="seq-content seq-half seq-half-left seq-valign">
+            <div>
+              <h2>Crime Scene Investigation</h2>
+              <h3></h3>
+              <a class="seq-button" href="http://sequencejs.com/" target="_blank">Find Out More</a>
+            </div>
+          </div>
+        </li>
+         
+      </ul>
+    </div>
+
+    
+  </div>
+
+  <script src="scripts/imagesloaded.pkgd.min.js"></script>
+  <script src="scripts/hammer.min.js"></script>
+  <script src="scripts/sequence.min.js"></script>
+  <script src="scripts/sequence-theme.two-up.js"></script>
+</body>
+</html>
