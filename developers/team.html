@@ -4,15 +4,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>Our Team</title>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "stylesheet" href = "../gallery/css/social.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	<style>
-		@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
-#nav{
-    color:#611e19;
-    font-size: 0.8em;
+    <link rel="stylesheet" href="../css/animate.min.css">
+      <style type="text/css">
+  .navi{
+    color:#611e19 !important;
+    font-size: 0.6em;
   }
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
@@ -20,6 +21,11 @@
      your background is light. */
   color: white;
 }
+          a:hover{text-decoration: none;}
+          .material-icons{margin-top: 11;}
+  </style>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
 
 
 body {
@@ -154,54 +160,92 @@ body {
     letter-spacing: 1px;
 }
 
-.team-hover {z-index: 102;}
+/*.team-hover {z-index: 102;}*/
 
 h5{color: #fff;}
 
+        .container{
+            z-ndex: -10;
+        }
+        .cl{
+            cursor: pointer;
+            width: 40px;
+        }
+        .cl:hover{
+            background: rgba(0, 0, 0, .5);
+        }
 	</style>
 </head>
 
 <body>
 
-<div class="demo-layout-transparent mdl-layout mdl-js-layout" style="position: fixed;z-index: 100;">
+<div class="demo-layout-transparent mdl-layout mdl-js-layout jmenu" style = "position: fixed; z-index: 100;">
   <header class="mdl-layout__header mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title" style = "font-size: 2.6em;">Abhisarga 2K17</span>
+      <span class="mdl-layout-title" style = "font-size: 1.95em;"><a style="color:rgb(255,64,129);font-weight: 400;" href="index.html">Abhisarga 2K17</a></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" style = "font-size: 2.3em;" href="">Events</a>
-        <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="gallery/gallery.html">Gallery</a>
-        <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="">Register</a>
-        <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="">Contact Us</a>
+      <nav class="mdl-navigation" style = "margin-left: 12vw;">
+        <a class="mdl-navigation__link" style = "font-size: 1.7em;" href="Events/events.html">Events</a>
+        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="gallery/gallery.html">Gallery</a>
+        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="">Register</a>
+        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link"  id="demo01" href="#animatedModal">Contact Us</a>
+          <a style="font-size: 1.7em;" class="mdl-navigation__link top-link" href="team.html">Web Masters</a>
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer menu" style = "background-color: black;font-size: 2.6em;color: white">
-    <span class="mdl-layout-title"  id="nav">Abhisarga 2K17</span>
+  <div class="mdl-layout__drawer menu" style = "background-color: black;font-size: 2.6em;color: white;">
+    <span class="mdl-layout-title"  id="nav"><a href="index.html" style="font-size: 1.1em;color:rgb(255,64,129);font-weight: 400;">Abhisarga 2K17</a></span>
     <nav class="mdl-navigation" >
-      <a class="mdl-navigation__link" href="" id="nav">Events</a>
-      <a class="mdl-navigation__link" href=""  id="nav" href="gallery/gallery.html">Gallery</a>
-      <a class="mdl-navigation__link" href="" id="nav">Register</a>
-      <a class="mdl-navigation__link" href=""  id="nav">Contact Us</a>
-      <a class="mdl-navigation__link" href=""  id="nav">Developers</a>
+      <a class="mdl-navigation__link navi" href="../Events/events.html" id="nav">Events</a>
+      <a class="mdl-navigation__link navi"    href="../gallery/gallery.html">Gallery</a>
+      <a class="mdl-navigation__link navi" href="" id="nav">Register</a>
+      <a class="mdl-navigation__link navi" id="demo02" href="#animatedModal">Contact Us</a>
+       <a class="mdl-navigation__link navi" href="team.html">Web Masters</a>
     </nav>
   </div>
   
   </div>
+    
+    <div id="animatedModal">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <h2 class="cl">&times;</h2>
+            </div>
+                
+            <div class="modal-content" style = "background: rgba(0, 0, 0, 0);box-shadow: 0 0 0 #fff; border: none;">
+                <!--Your modal content goes here-->
+                <h1>
+Contact</h1>
+<p>
+Indian Institute of Information Technology
+Sri City, Satyavedu Mandal, Chittoor Dist.</p>
+Andhra Pradesh - 517588<br>
+website: www.iiits.ac.in<br><br>
+Contact Numbers<br><br>
+Mr. Ramachandra Reddy: +91 - 9000025622<br><br>
+( Event Organiser's )<br>
+Srikanth: +91 - 9866204886<br>
+
+Sunitha: +91 - 9705562576<br>
+Chinamay: +91 - 8332905828<br>
+
+Phanindra: +91 - 8332948850<br>
+            </div>
+        </div>
 
 	<div class="container">
                     <div class="row">
                         <div class="heading-title text-center">
                             <h3 class="text-uppercase" style="margin-top: 10%;color: #E0F2F1;">Web Masters</h3>
                         </div>
-
-                        <div class="col-md-4 col-sm-4" style="height: 5%">
-                            <div class="team-member">
+<div class = "mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="team-member" style = "height:270px;">
                                 <div class="team-img">
-                                    <img src="images/sao.jpg" alt="team member" class="img-responsive" width="300px" style="size: 10%">
+                                    <img src="images/sao.jpg" alt="team member" class="img-responsive">
                                 </div>
                                 <div class="team-hover">
                                     <div class="desk">
@@ -219,7 +263,7 @@ h5{color: #fff;}
                             </div>
                         </div>
 
-<div class="col-md-4 col-sm-4">
+<div class="mdl-cell mdl-cell--4-col">
                             <div class="team-member">
                                 <div class="team-img">
                                     <img src="images/sundhar.jpg" alt="team member" class="img-responsive">
@@ -240,7 +284,7 @@ h5{color: #fff;}
                             </div>
                         </div>
 
-<div class="col-md-4 col-sm-4">
+<div class="mdl-cell mdl-cell--4-col">
                             <div class="team-member">
                                 <div class="team-img">
                                     <img src="images/jesse.jpg" alt="team member" class="img-responsive">
@@ -262,6 +306,8 @@ h5{color: #fff;}
                               </div>
                         </div>
 
+                        </div>
+    
 <div class="col-md-4 col-sm-4">
                             <div class="team-member">
                                 <div class="team-img">
@@ -307,31 +353,25 @@ h5{color: #fff;}
                                 <h5>Shyam Sunder</h5>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="team-member">
-                                <div class="team-img">
-                                    <img src="images/likhith.jpg" alt="team member" class="img-responsive">
-                                </div>
-                                <div class="team-hover">
-                                    <div class="desk">
-                                        <h4>I love to design</h4>
-                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
-                                    </div>
-                                    <div class="s-link">
-                                        <a href="https://www.facebook.com/cloud.fiire" target="_blank"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team-title">
-                                <h5>Likhith Karthik</h5>
-                            </div>
-                        </div>
+                        
 
                     </div>
 
                 </div>
+    
+    <script src="../js/jquery.min.js"></script>
+        <script src="../js/animatedModal.min.js"></script>
+    <script>
+        $("#demo01").animatedModal()
+        $("#demo02").animatedModal()
+    </script>
+    <div class="share" style = "z-index: 100000;">
+  <div class="fab no"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+</div>
+<script src = "../gallery/js/social.js"></script>
 </body>
 
 </html>
