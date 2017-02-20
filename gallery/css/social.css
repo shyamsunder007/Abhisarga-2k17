@@ -57,21 +57,24 @@
   opacity: 0;
   will-change: animation;
 }
+/*
 .fab:nth-child(1) {
   background: #1DA1F2;
   top: -126px;
 }
-.fab:nth-child(2) {
+*/
+.fab:nth-child(1) {
   background: #46629E;
-  top: -84px;
-}
-.fab:nth-child(3) {
-  background: #DB4437;
   top: -42px;
 }
+.fab:nth-child(2) {
+  background: #DB4437;
+}
+/*
 .fab:nth-child(4) {
   background: #FF5722;
 }
+*/
 .fab.active {
   -webkit-animation: 0.48s up forwards;
           animation: 0.48s up forwards;
