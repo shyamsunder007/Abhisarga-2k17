@@ -1,6 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
   <title>Abhisarga</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -29,7 +68,8 @@
 }
     /* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #000; background-image: url("img/Backgorund.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } , .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
   </style>
-
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "stylesheet" href = "css/social.css">
 </head>
 <body>
 
@@ -58,9 +98,36 @@
         <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="">Register</a>
         <a style = "font-size: 2.3em;" class="mdl-navigation__link top-link" href="">Contact Us</a>
           <a style="font-size: 2.3em;" class="mdl-navigation__link top-link" href="developers/team.html">Web Masters</a>
+          <button id="myBtn">Contact Us</button>
+                  
+          
       </nav>
     </div>
   </header>
+  <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>
+Contact</h1>
+<p>
+Indian Institute of Information Technology
+Sri City, Satyavedu Mandal, Chittoor Dist.</p>
+Andhra Pradesh - 517588<br>
+website: www.iiits.ac.in<br><br>
+Contact Numbers<br><br>
+Mr. Ramachandra Reddy: +91 - 9000025622<br><br>
+( Event Organiser's )<br>
+Srikanth: +91 - 9866204886<br>
+
+Sunitha: +91 - 9705562576<br>
+Chinamay: +91 - 8332905828<br>
+
+Phanindra: +91 - 8332948850<br>
+  </div>
+
+</div>
   <div class="mdl-layout__drawer menu" style = "background-color: black;font-size: 2.6em;color: white">
     <span class="mdl-layout-title"  id="nav"><a href="index.html">Abhisarga 2K17</a></span>
     <nav class="mdl-navigation" >
@@ -80,9 +147,44 @@
   <span class='info hours' style = "padding-left:12px;top:200px;font-size:2.0em">Hours</span>
   <span class='info minutes' style = "margin-left:38px;top:200px;font-size:2.0em">Minutes</span>
 </div>
-<div style="padding-top:10px" ><img src="img/insta_icon.png"  class="img-responsive" style = "position: absolute; left: 49vw; top: 90%;" width= "4%" height="8%">
+<!-- <div style="padding-top:10px" ><img src="img/insta_icon.png"  class="img-responsive" style = "position: absolute; left: 49vw; top: 90%;" width= "4%" height="8%">
 <img src="img/youtube_icon.png"  class="img-responsive" style = "position: absolute; left: 54vw; top: 89%;" width= "4%" height="10%">
-<img src="img/facebook_icon.gif"  class="img-responsive" style = "position: absolute; left: 44vw; top: 90%;" width= "4%" height="8%"></div>
+<img src="img/facebook_icon.gif"  class="img-responsive" style = "position: absolute; left: 44vw; top: 90%;" width= "4%" height="8%"></div> -->
   
+    <div class="share">
+  <div class="fab no"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+</div>
+<script src = "js/social.js"></script>
+  <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 </body>
 </html>
