@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Two Up - Sequence.js Theme</title>
+  <title>events</title>
   <link href="css/sequence-theme.two-up.css" rel="stylesheet" media="all">
   <!--[if lt IE 9]>
     <link href="css/sequence-theme.two-up-ie8.css" rel="stylesheet" media="all">
@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="../css/animate.min.css">
   <style type="text/css">
   .navi{
     color:#611e19 !important;
@@ -35,9 +36,16 @@
       color:white;
     }
     .seq-screen {position: fixed;top:0;}
+      .cl{
+            cursor: pointer;
+            width: 40px;
+        }
+        .cl:hover{
+            background: rgba(0, 0, 0, .5);
+        }
   </style>
   <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel = "stylesheet" href = "../carousel/css/social.css">
+  <link rel = "stylesheet" href = "../gallery/css/social.css">
 </head>
 <body>
 
@@ -45,32 +53,60 @@
   <header class="mdl-layout__header mdl-layout__header--transparent">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title" style = "font-size: 1.95em;"><a style="color:rgb(255,64,129);font-weight: 400;" href="index.html">Abhisarga 2K17</a></span>
+      <span class="mdl-layout-title" style = "font-size: 1.95em;"><a style="color:rgb(255,64,129);font-weight: 400;" href="../index.html">Abhisarga 2K17</a></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <nav class="mdl-navigation" style = "margin-left: 12vw;">
-        <a class="mdl-navigation__link" style = "font-size: 1.7em;" href="Events/events.html">Events</a>
-        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="gallery/gallery.html">Gallery</a>
-        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="">Register</a>
-        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="">Contact Us</a>
-          <a style="font-size: 1.7em;" class="mdl-navigation__link top-link" href="developers/team.html">Web Masters</a>
+        <a class="mdl-navigation__link" style = "font-size: 1.7em;" href="events.html">Events</a>
+        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="../gallery/gallery.html">Gallery</a>
+        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeJCPQkKJNgCOk6X_TL3KgL7U6CNwc_tGJNYbTHNYgROtUNwg/viewform?c=0&w=1">Register</a>
+        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" id="demo01" href="#animatedModal">Contact Us</a>
+          <a style="font-size: 1.7em;" class="mdl-navigation__link top-link" href="../developers/team.html">Web Masters</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer menu" style = "background-color: black;font-size: 2.6em;color: white">
-    <span class="mdl-layout-title"  id="nav"><a href="index.html" style="font-size: 1.1em;color:rgb(255,64,129);font-weight: 400;">Abhisarga 2K17</a></span>
+    <span class="mdl-layout-title"  id="nav"><a href="../index.html" style="font-size: 1.1em;color:rgb(255,64,129);font-weight: 400;">Abhisarga 2K17</a></span>
     <nav class="mdl-navigation" >
-      <a class="mdl-navigation__link navi" href="Events/events.html" id="nav">Events</a>
-      <a class="mdl-navigation__link navi"    href="gallery/gallery.html">Gallery</a>
-      <a class="mdl-navigation__link navi" href="" id="nav">Register</a>
-      <a class="mdl-navigation__link navi" href=""  id="nav">Contact Us</a>
-       <a class="mdl-navigation__link navi" href="developers/team.html">Web Masters</a>
+      <a class="mdl-navigation__link navi" href="events.html" id="nav">Events</a>
+      <a class="mdl-navigation__link navi"    href="../gallery/gallery.html">Gallery</a>
+      <a class="mdl-navigation__link navi" href="https://docs.google.com/forms/d/e/1FAIpQLSeJCPQkKJNgCOk6X_TL3KgL7U6CNwc_tGJNYbTHNYgROtUNwg/viewform?c=0&w=1" id="nav">Register</a>
+      <a class="mdl-navigation__link navi" id="demo02" href="#animatedModal"  id="nav">Contact Us</a>
+       <a class="mdl-navigation__link navi" href="../developers/team.html">Web Masters</a>
     </nav>
   </div>
   
   </div>
 
+    
+     <div id="animatedModal">
+            <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <h2 class="cl">&times;</h2>
+            </div>
+                
+            <div class="modal-content" style = "background: rgba(0, 0, 0, 0);box-shadow: 0 0 0 #fff; border: none;">
+                <!--Your modal content goes here-->
+                <h1>
+Contact</h1>
+<p>
+Indian Institute of Information Technology
+Sri City, Satyavedu Mandal, Chittoor Dist.</p>
+Andhra Pradesh - 517588<br>
+website: www.iiits.ac.in<br><br>
+Contact Numbers<br><br>
+Mr. Ramachandra Reddy: +91 - 9000025622<br><br>
+( Event Organiser's )<br>
+Srikanth: +91 - 9866204886<br>
+
+Sunitha: +91 - 9705562576<br>
+Chinamay: +91 - 8332905828<br>
+
+Phanindra: +91 - 8332948850<br>
+            </div>
+        </div>
+    
   <div id="sequence" class="seq">
 
     <div class="seq-nav">
@@ -244,7 +280,7 @@ Note: Team size of 5 to 7 is allowed.</h3>
         </li>
           <li class="step3">
           <div data-seq class="seq-feature seq-half seq-half-right">
-            <div style="background-image: url(images/DC.png)">
+            <div style="background-image: url(images/DC.jpg)">
               <!-- This image is hidden via CSS and is only here for accessibility. The image shown is actually a background-image set via an inline style above -->
               <img src="images/purple-flowers.jpg" alt="A close-up of several purple flowers with yellow centers. A few rain drops sit on the pettels" />
             </div>
@@ -416,14 +452,19 @@ Note: Team size: 4 to 5 people per team</h3>
   </div>
 
 <div class="share">
-  <div class="fab no"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-  <div class="fab no"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-  <div class="fab no"><i class="fa fa-youtube" aria-hidden="true"></i></div>
-  <div class="fab no"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+<!--  <div class="fab no"><i class="fa fa-twitter" aria-hidden="true"></i></div>-->
+  <a href = "https://www.facebook.com/abhisarga" class="fab no"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href = "https://www.youtube.com/channel/UCf1DbeeTKGzpwRv9X7YECfg" class="fab no"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+<!--  <div class="fab no"><i class="fa fa-google-plus" aria-hidden="true"></i></div>-->
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src = "../carousel/js/social.js"></script>
+    <script src="../js/jquery.min.js"></script>
+<script src = "../gallery/js/social.js"></script>
 
+        <script src="../js/animatedModal.min.js"></script>
+    <script>
+        $("#demo01").animatedModal()
+        $("#demo02").animatedModal()
+    </script>
   <script src="scripts/imagesloaded.pkgd.min.js"></script>
   <script src="scripts/hammer.min.js"></script>
   <script src="scripts/sequence.min.js"></script>
