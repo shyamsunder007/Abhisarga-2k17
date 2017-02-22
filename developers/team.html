@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/animate.min.css">
       <style type="text/css">
   .navi{
-    color:#611e19 !important;
+    color:#f20346 !important;
     font-size: 0.6em;
   }
 .demo-layout-transparent .mdl-layout__header,
@@ -191,8 +191,8 @@ h5{color: #fff;}
         <a class="mdl-navigation__link" style = "font-size: 1.7em;" href="../Events/events.html">Events</a>
         <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="../gallery/gallery.html">Gallery</a>
         <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeJCPQkKJNgCOk6X_TL3KgL7U6CNwc_tGJNYbTHNYgROtUNwg/viewform?c=0&w=1">Register</a>
-        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link"  id="demo01" href="#animatedModal">Contact Us</a>
-          <a style="font-size: 1.7em;" class="mdl-navigation__link top-link" href="team.html">Web Masters</a>
+        <a style = "font-size: 1.7em;" class="mdl-navigation__link top-link"  id="demo01" href="#modal-01">Contact Us</a>
+          <a style="font-size: 1.7em;" class="mdl-navigation__link top-link" href="team.html">Team</a>
       </nav>
     </div>
   </header>
@@ -202,23 +202,22 @@ h5{color: #fff;}
       <a class="mdl-navigation__link navi" href="../Events/events.html" id="nav">Events</a>
       <a class="mdl-navigation__link navi"    href="../gallery/gallery.html">Gallery</a>
       <a class="mdl-navigation__link navi" href="https://docs.google.com/forms/d/e/1FAIpQLSeJCPQkKJNgCOk6X_TL3KgL7U6CNwc_tGJNYbTHNYgROtUNwg/viewform?c=0&w=1" id="nav">Register</a>
-      <a class="mdl-navigation__link navi" id="demo02" href="#animatedModal">Contact Us</a>
-       <a class="mdl-navigation__link navi" href="team.html">Web Masters</a>
+      <a class="mdl-navigation__link navi" id="demo02" href="#modal-01">Contact Us</a>
+       <a class="mdl-navigation__link navi" href="team.html">Team</a>
     </nav>
   </div>
   
   </div>
     
-    <div id="animatedModal">
+    <div id="modal-01">
             <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
-            <div  id="btn-close-modal" class="close-animatedModal"> 
+            <div  id="btn-close-modal" class="close-modal-01"> 
                 <h2 class="cl">&times;</h2>
             </div>
                 
-            <div class="modal-content" style = "background: rgba(0, 0, 0, 0);box-shadow: 0 0 0 #fff; border: none;">
+            <div class="modal-content" style = "background: rgba(0, 0, 0, 0);box-shadow: 0 0 0 #fff; border: none;text-align: center;color: #d4cece;">
                 <!--Your modal content goes here-->
-                <h1>
-Contact</h1>
+                <h1 style = "color: #00ffed;">Contact</h1>
 <p>
 Indian Institute of Information Technology
 Sri City, Satyavedu Mandal, Chittoor Dist.</p>
@@ -245,7 +244,7 @@ Phanindra: +91 - 8332948850<br>
     <div class="mdl-cell mdl-cell--4-col">
                             <div class="team-member">
                                 <div class="team-img">
-                                    <img src="images/jesse.jpg" alt="team member" class="img-responsive">
+                                    <img src="https://drive.google.com/open?id=0B83gh2101aXxUVJadHh6V2pwR0E" alt="team member" class="img-responsive">
                                 </div>
                                 <div class="team-hover">
                                     <div class="desk">
@@ -334,7 +333,7 @@ Phanindra: +91 - 8332948850<br>
                         </div>
                         
                         
-                       <!-- <div class="col-md-4 col-sm-4">
+                        <div class="col-md-4 col-sm-4">
                             <div class="team-member">
                                 <div class="team-img">
                                     <img src="images/harsha.jpg" alt="team member" class="img-responsive">
@@ -358,17 +357,17 @@ Phanindra: +91 - 8332948850<br>
 
                     </div>
 
-                </div>-->
+                </div>
     
     <script src="../js/jquery.min.js"></script>
         <script src="../js/animatedModal.min.js"></script>
     <script>
-        $("#demo01").animatedModal()
-        $("#demo02").animatedModal()
+        $("#demo01").animatedModal({ modalTarget:'modal-01',color:'#000'})
+        $("#demo02").animatedModal({ modalTarget:'modal-01',color:'#000'})
     </script>
     <div class="share" style = "z-index: 100000;">
-   <a href = "https://www.facebook.com/abhisarga" class="fab no"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-  <a href = "https://www.youtube.com/channel/UCf1DbeeTKGzpwRv9X7YECfg" class="fab no"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+   <a href = "https://www.facebook.com/abhisarga" target = "_blank" class="fab no"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+  <a href = "https://www.youtube.com/channel/UCf1DbeeTKGzpwRv9X7YECfg" target = "_blank" class="fab no"><i class="fa fa-youtube" aria-hidden="true"></i></a>
 </div>
 <script src = "../gallery/js/social.js"></script>
 </body>
